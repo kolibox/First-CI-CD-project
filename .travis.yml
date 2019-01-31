@@ -7,7 +7,7 @@ before_install:
 
 script:
     - ls -al
-    - docker run -p 80:80 -d -v ${PWD}/index.html:/usr/share/nginx/html/index.html kolibomber/first-ci-cd-project
+#    - docker run -p 80:80 -d -v ${PWD}/index.html:/usr/share/nginx/html/index.html kolibomber/first-ci-cd-project
     
 deploy:
     provider: elasticbeanstalk
