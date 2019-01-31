@@ -7,3 +7,16 @@ before_install:
 
 script:
     - docker run -p 80:80 -v ${PWD}/index.html:/usr/share/ngins/html/index.html kolibomber/first-ci-cd-project
+    
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "First CI-CD project"
+    env: "FirstCiCdProject-env"
+    bucket_name: "elasticbeanstalk-us-east-2-756244955035"
+    bucket_path: "First CI-CD project"
+    on:
+       branch: master
+    access_key_id: "$AWS_ACCESS_KEY"
+    secret_access_key:
+      secure: "$AWS_SECRET_KEY"
