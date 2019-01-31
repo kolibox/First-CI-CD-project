@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t kolibomber/first-ci-cd-project -f Dockerfile.dev .
+    - docker build -t kolibomber/first-ci-cd-project .
 
 script:
     - docker run -p 80:80 -d -v ${PWD}/index.html:/usr/share/ngins/html/index.html kolibomber/first-ci-cd-project
