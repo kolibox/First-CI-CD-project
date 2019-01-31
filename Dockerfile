@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM mattrayner/lamp:latest
 MAINTAINER kolibomber
-COPY index.html /usr/share/nginx/html/index.html
+COPY shells/* /var/www/html/shells/
 EXPOSE 80
