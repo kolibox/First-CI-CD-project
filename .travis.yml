@@ -6,4 +6,4 @@ before_install:
     - docker build -t kolibomber/First-CI-CD-project -f Dockerfile.dev .
 
 script:
-    docker run -p 80:80 -v ${PWD}/index.html:/usr/share/ngins/html/index.html kolibomber/First-CI-CD-project
+    - docker run -p 80:80 -v ${PWD}/index.html:/usr/share/ngins/html/index.html kolibomber/First-CI-CD-project
