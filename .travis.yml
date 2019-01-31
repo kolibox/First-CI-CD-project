@@ -1,6 +1,6 @@
 sudo: required
-    services:
-      - docker
+services:
+    - docker
 
 before_install:
     - docker build -t kolibomber/First-CI-CD-project -f Dockerfile.dev .
