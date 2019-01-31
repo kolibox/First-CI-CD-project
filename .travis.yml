@@ -6,7 +6,7 @@ before_install:
     - docker build -t kolibomber/first-ci-cd-project -f Dockerfile.dev .
 
 script:
-    - docker run -p 80:80 -v ${PWD}/index.html:/usr/share/ngins/html/index.html kolibomber/first-ci-cd-project
+    - docker run -p 80:80 -d -v ${PWD}/index.html:/usr/share/ngins/html/index.html kolibomber/first-ci-cd-project
     
 deploy:
     provider: elasticbeanstalk
