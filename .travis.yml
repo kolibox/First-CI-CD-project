@@ -8,6 +8,8 @@ before_install:
 script:
     - ls -al
 #    - docker run -p 80:80 -d -v ${PWD}/index.html:/usr/share/nginx/html/index.html kolibomber/first-ci-cd-project
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    - docker push kolibox/first-ci-cd-project
     
 deploy:
     provider: elasticbeanstalk
