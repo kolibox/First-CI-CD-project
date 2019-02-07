@@ -1,0 +1,18 @@
+{
+  "AWSEBDockerrunVersion" : 2,
+  "containerDefinitions": [
+   {
+     "name": "first-ci-cd-project",
+     "image": "kolibomber/first-ci-cd-project",
+     "hostname": "first-ci-cd-project",
+     "essential": false,
+     "memory": 128,
+     "portMappings": [
+      {
+       "hostPort": 80,
+       "containerPort": 80
+      }
+     ]
+   }
+  ]
+}
